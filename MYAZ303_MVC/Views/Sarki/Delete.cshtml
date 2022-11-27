@@ -1,0 +1,28 @@
+﻿@model Film
+
+<form method="post" asp-action="Delete">
+    <input asp-for="filmID" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Film Sil</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label>Film Adı</label>
+            <input asp-for="filmAd" disabled class="form-control" />
+            <span asp-validation-for="filmAd" class="text-danger"></span>
+            <label>Süre</label>
+            <input asp-for="sure" disabled class="form-control" />
+            <span asp-validation-for="sure" class="text-danger"></span>
+            <label>Yönetmen</label>
+            <input asp-for="yonetmen" disabled class="form-control" />
+            <span asp-validation-for="yonetmen" class="text-danger"></span>
+            <label>Kategori</label>
+            <input asp-for="kategori" disabled class="form-control" />
+            <span asp-validation-for="kategori" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Sil</button>
+        <a asp-controller="film" asp-action="Index" class="btn btn-secondary" style="width:150px">Geri Dön</a>
+    </div>
+</form>
